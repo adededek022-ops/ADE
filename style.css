@@ -6,7 +6,7 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-height:100vh;
+min-height:100vh;
 background:linear-gradient(180deg,#050505,#0f0f0f,#050505);
 color:white;
 display:flex;
@@ -15,7 +15,7 @@ align-items:center;
 overflow:hidden;
 }
 
-/* LOVE BERJATUHAN */
+/* LOVE */
 
 .love-container{
 position:fixed;
@@ -31,7 +31,6 @@ z-index:1;
 .love{
 position:absolute;
 animation:fall linear infinite;
-opacity:0.9;
 }
 
 @keyframes fall{
@@ -61,26 +60,22 @@ height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-background:transparent;
 z-index:2;
 }
 
 button{
-padding:14px 40px;
-font-size:18px;
-background:transparent;
-border:1px solid rgba(255,255,255,0.4);
-color:white;
+padding:18px 50px;
+font-size:22px;
 border-radius:40px;
+border:1px solid rgba(255,255,255,0.4);
+background:transparent;
+color:white;
 cursor:pointer;
-letter-spacing:1px;
-transition:0.4s;
 }
 
 button:hover{
 background:white;
 color:black;
-transform:scale(1.05);
 }
 
 /* KONTEN */
@@ -90,40 +85,43 @@ display:none;
 }
 
 .overlay{
-max-width:750px;
-padding:50px;
+width:95%;
+max-width:900px;
+padding:30px;
 text-align:center;
 animation:fade 2s ease;
 }
 
 .title{
-font-size:38px;
-font-weight:300;
-letter-spacing:4px;
+font-size:50px;
 margin-bottom:30px;
-color:#f5f5f5;
 }
+
+/* BOX */
 
 .container{
-background:rgba(255,255,255,0.04);
-border:1px solid rgba(255,255,255,0.08);
-padding:40px;
-border-radius:18px;
-backdrop-filter:blur(10px);
+background:rgba(255,255,255,0.05);
+border:1px solid rgba(255,255,255,0.1);
+padding:35px;
+border-radius:20px;
 }
 
+/* FOTO BESAR */
+
 .photo{
-width:260px;
-border-radius:12px;
-margin-bottom:25px;
+width:100%;
+max-width:420px;
+border-radius:15px;
+margin-bottom:30px;
 animation:photo 2s ease;
 }
 
+/* TEKS BESAR */
+
 .message{
-font-size:16px;
-line-height:1.9;
-color:#d0d0d0;
-font-weight:300;
+font-size:22px;
+line-height:1.8;
+color:#e0e0e0;
 }
 
 /* ANIMASI */
@@ -152,6 +150,29 @@ transform:scale(0.9);
 to{
 opacity:1;
 transform:scale(1);
+}
+
+}
+
+/* KHUSUS HP */
+
+@media (max-width:600px){
+
+.title{
+font-size:36px;
+}
+
+.photo{
+max-width:90%;
+}
+
+.message{
+font-size:20px;
+}
+
+button{
+font-size:20px;
+padding:16px 45px;
 }
 
 }
