@@ -7,20 +7,21 @@ btn.onclick = function () {
   content.classList.remove("hidden");
 };
 
-/* efek bintang */
+/* love dan tulisan jatuh */
 
-for (let i = 0; i < 60; i++) {
-  let star = document.createElement("div");
+let container = document.getElementById("love-container");
 
-  star.style.position = "absolute";
-  star.style.width = "2px";
-  star.style.height = "2px";
-  star.style.background = "white";
+let words = ["❤️", "🤍", "I LOVE YOU"];
 
-  star.style.top = Math.random() * 100 + "vh";
-  star.style.left = Math.random() * 100 + "vw";
+for (let i = 0; i < 50; i++) {
+  let love = document.createElement("div");
 
-  star.style.opacity = Math.random();
+  love.className = "love";
+  love.innerText = words[Math.floor(Math.random() * words.length)];
 
-  document.body.appendChild(star);
+  love.style.left = Math.random() * 100 + "vw";
+  love.style.animationDuration = 3 + Math.random() * 5 + "s";
+  love.style.fontSize = 14 + Math.random() * 22 + "px";
+
+  container.appendChild(love);
 }
